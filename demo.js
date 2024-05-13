@@ -1,38 +1,41 @@
 "use strict";
 
-window.onload = function() {
+// When the window is loaded, set up initial configurations.
+window.onload = function () {
+  initializeGiftIdeasDropdown();
+  configureEventHandlers();
+};
+function initializeGiftIdeasDropdown() {
+  let gifts = [
+    { idea: "A house", value: "Gift1" },
+    { idea: "A vacation", value: "Gift2" },
+    { idea: "A rose", value: "Gift3" },
+    { idea: "A photoalbum", value: "Gift4" },
+  ];
 
-    //Name of Fuction, prefrix INIT to indicate this is the first thing to Do
-    initLoadDropdownGiftIdeas()
+  const dropdown = document.getElementById("giftIdeas");
+  gifts.forEach((gift) => {
+    let option = new Option(gift.idea, gift.value);
+    dropdown.appendChild(option);
+  });
 }
-function initLoadDropdownGiftIdeas() {
-        // load the dropdown list
-      //  let states = ["Alabama", "Alaska", "Arizona", ... ];
+function configureEventHandlers() {
+  const giftList = document.getElementById("giftIdeas");
+  giftList.value = "Gift4"; // Set a default value if applicable.
+  giftList.onchange = displaySelectedGift; // Assign handler for change event.
+}
 
+// Displays the selected gift in the 'message' element.
+function displaySelectedGift() {
+  const giftList = document.getElementById("giftIdeas");
+  const selectedValue = giftList.value;
+  document.getElementById("message").innerText = selectedValue;
+}
 
-
-        let giftIdeas = ["A house", "A vacation", "A rose", "A photoalbum"];
-        let giftValues = ["Gift1","Gift2","Gift3","Gift4"];
-
-   
-
-        //Grab the list from HTML
-        const giftList = document.getElementById("giftIdeas");
-        let amoutOfGifts = giftIdeas.length;
-        for (let i = 0; i < amoutOfGifts; i++) {
-        // create the option element
-        let theOption = document.createElement("option");
-        // set the text and value of the option you created
-        theOption.textContent = giftIdeas[i]; 
-        theOption.value = giftValues[i]; 
-        // append the option as a child of (inside) the 
-        // select element
-
-       // ADDing the elements to the list 
-       giftList.appendChild(theOption);
-        }
-
-        }
-<select id="giftIdeas" name="giftIdeasNames" size="4">
-             
-               </select>
+// (Optional) Function to clear filters, if required by the application.
+function clearFilters() {
+  const giftList = document.getElementById("giftIdeas");
+  const searchField = document.getElementById("mySearchField");
+  giftList.value = null; // Reset dropdown.
+  searchField.value = ""; // Clear any text in the search field.
+}

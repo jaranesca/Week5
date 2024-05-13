@@ -1,0 +1,105 @@
+/* Custom CSS Styles */
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/Photographer\ Joe\ Horner\ Depicts\ Flowers\ Like\ You’ve\ Never\ Seen\ Them\ Before.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    color: black;
+    padding: 10px 20px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(10px); 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; 
+}
+.logo {
+    color: palevioletred; 
+    font-size: 24px; 
+    font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+main {
+    padding: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+    font-weight: 700;
+    font-size: larger;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: palevioletred;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: pink;
+}
+
+#message {
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+.container{
+    background-color:rgba(255, 255, 255, 0.7); 
+    border-radius: 5px;
+    width: 500px;
+    margin-top:200px ;
+}
+
