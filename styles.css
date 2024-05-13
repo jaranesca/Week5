@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/Photographer\ Joe\ Horner\ Depicts\ Flowers\ Like\ You’ve\ Never\ Seen\ Them\ Before.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 20px;
+    border-radius: 10px;
+    width: 500PX;
+    height: 550px;
+}
+
+.message-container {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button:hover {
+    background-color: pink;
+    color: black;
+}
+img{
+    width: 200px;
+    border-radius: 200px;
+}
